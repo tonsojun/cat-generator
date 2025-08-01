@@ -7,10 +7,19 @@ pizzaCatButton.addEventListener("click", pizzaButtonClicked);
 function pizzaButtonClicked() {
     console.log("Hey you clicked the pizza button")
 
-    let pizzaCatImage = document.createElement("img");
-    pizzaCatImage.src = "pizza-cat.webp";
+    let timesToRun = prompt("How many pizza cats you want?");
 
-    document.body.appendChild(pizzaCatImage);
+    let timesToRunAsNumber = Number(timesToRun);
+
+    for (let i = 0; i < timesToRunAsNumber; i++) {
+        console.log("Inside the loop " + i);
+        
+        let pizzaCatImage = document.createElement("img");
+        pizzaCatImage.src = "pizza-cat.webp";
+    
+        document.body.appendChild(pizzaCatImage);
+    }
+
 }
 
 let vibeCatButton = document.getElementById("vibe-cat-button");
